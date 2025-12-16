@@ -18,7 +18,12 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-
+- name: Install Gradle 8.4 (System, No Wrapper)
+  run: |
+    wget https://services.gradle.org/distributions/gradle-8.4-bin.zip
+    sudo unzip gradle-8.4-bin.zip -d /opt
+    sudo ln -sf /opt/gradle-8.4/bin/gradle /usr/bin/gradle
+    gradle --version
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
