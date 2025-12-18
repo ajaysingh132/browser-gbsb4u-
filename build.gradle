@@ -1,42 +1,3 @@
-plugins {
-    id 'com.android.application'
-}
-
-android {
-    namespace 'com.gbsb4u.webbrowser'
-    compileSdk 34
-
-    defaultConfig {
-        applicationId 'com.gbsb4u.webbrowser'
-        minSdk 21
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
-    }
-
-    buildTypes {
-        debug {
-            minifyEnabled false
-        }
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile(
-                'proguard-android-optimize.txt'
-            ), 'proguard-rules.pro'
-        }
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
-    }
-}
-
-dependencies {
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-}
-
 buildscript {
     repositories {
         google()
@@ -52,7 +13,4 @@ allprojects {
         google()
         mavenCentral()
     }
-}
-plugins {
-    id 'com.android.application' version '8.1.0' apply false
 }
